@@ -12,9 +12,10 @@ const Inputs = () => {
       </div>
       <div>
         <input
-          className="text-md font-semibold p-2 px-5 w-96 shadow-xl focus:outline-none capitalize placeholder:lowercase bg-[#1d1c1f] text-white  rounded-full"
+          className="text-md font-semibold p-2 px-5 py-4  shadow-xl focus:outline-none capitalize placeholder:lowercase bg-[#1d1c1f] text-white  rounded-full"
           placeholder="search for city"
           type="text"
+          style={{ width: "600px" }}
         >
           {/* <UilSearch /> */}
         </input>
