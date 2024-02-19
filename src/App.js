@@ -1,13 +1,14 @@
 import "./App.css";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
-import HeaderButtons from "./components/HeaderButtons";
+import Header from "./components/Header";
+import TimeAndLocation from "./components/TimeAndLocation";
+import TemperatureDetails from "./components/TemperatureDetails";
 
 function App() {
   return (
-    <div className="App">
-      <div className="mx-auto max-w-screen-full py-5 px-32 bg-black text-white">
-        <HeaderButtons />
-      </div>
+    <div className="mx-auto max-w-screen-full py-3 px-28 bg-black text-white">
+      <Header />
+      <TemperatureDetails />
     </div>
   );
 }
