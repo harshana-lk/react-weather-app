@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/harshana-lk/react-weather-app">
-    <img src="src/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/weather-icons/09n.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Weatherly - React Weather App</h3>
@@ -85,5 +85,3 @@ const API_KEY = 'ENTER YOUR API';
 ## Acknowledgements
 
 - [Harshana Jayaweera](https://github.com/harshana-lk/)
-- []()
-- []()
