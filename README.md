@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+  <a href="https://github.com/harshana-lk/react-weather-app">
+    <img src="src/assets/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Weatherly - React Weather App</h3>
 
-## Available Scripts
+  <p align="center">
+    An Awesome Weather App Project
+    <br/>
+    <br/>
+    <a href="https://github.com/harshana-lk/react-weather-app">View Demo</a>
+    .
+  </p>
+</p>
 
-In the project directory, you can run:
+![Downloads](https://img.shields.io/github/downloads/harshana-lk/react-weather-app/total) ![Contributors](https://img.shields.io/github/contributors/harshana-lk/react-weather-app?color=dark-green) ![Forks](https://img.shields.io/github/forks/harshana-lk/react-weather-app?style=social) ![Stargazers](https://img.shields.io/github/stars/harshana-lk/react-weather-app?style=social) ![Issues](https://img.shields.io/github/issues/harshana-lk/react-weather-app) ![License](https://img.shields.io/github/license/harshana-lk/react-weather-app)
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screen Shot](src/assets/Screenshot_1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Introducing Weatherly: Your Personal Meteorological Companion
 
-### `npm test`
+Weatherly is your go-to weather app for staying informed and prepared for whatever Mother Nature has in store. With a sleek and intuitive interface, WeatherEase provides accurate and up-to-date weather forecasts tailored to your location, ensuring you're always one step ahead of changing weather conditions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Key Features:
 
-### `npm run build`
+1. **Real-Time Updates**: Get instant access to current weather conditions, including temperature, humidity, wind speed, and more, all updated in real-time.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Hourly and Daily Forecasts**: Plan your day with confidence using hourly and daily forecasts that provide detailed insights into expected weather patterns, precipitation levels, and temperature fluctuations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Interactive Radar**: Track storms and precipitation with our interactive radar feature, allowing you to zoom in and out for a closer look at weather activity in your area.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Dark Mode Support**: Reduce eye strain and conserve battery life with our sleek dark mode option, perfect for nighttime use or prolonged viewing.
 
-### `npm run eject`
+Weatherly is designed to be your reliable companion for all things weather-related, whether you're planning your daily commute, scheduling outdoor activities, or simply staying informed about the world around you. Download WeatherEase today and take control of your weather experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Weatherly is a sleek and efficient weather app crafted with React, Tailwind CSS, and powered by the OpenWeather API. With seamless React routing, Weatherly provides users with a smooth and intuitive experience for accessing accurate weather forecasts. Whether you're planning your day or keeping an eye on the weather ahead, Weatherly simplifies your weather tracking needs with style and reliability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This is an example of how to list things you need to use the software and how to install them.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- npm
 
-### Code Splitting
+```sh
+npm install npm@latest -g
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation
 
-### Analyzing the Bundle Size
+1. Get a free API Key at [https://openweathermap.org/api](https://openweathermap.org/api)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Clone the repo
 
-### Making a Progressive Web App
+```sh
+git clone https://github.com/harshana-lk/react-weather-app
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Install NPM packages
 
-### Advanced Configuration
+```sh
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Enter your API in `WeatherService.js`
 
-### Deployment
+```JS
+const API_KEY = 'ENTER YOUR API';
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Authors
 
-### `npm run build` fails to minify
+- **Harshana Jayaweera** - _CS Student_ - [Harshana Jayaweera](https://github.com/harshana-lk/) - _Built ReadME Template_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+
+- [Harshana Jayaweera](https://github.com/harshana-lk/)
+- []()
+- []()
