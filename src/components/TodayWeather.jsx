@@ -19,9 +19,9 @@ import TimeAndLocation from "./TimeAndLocation";
 const TemperatureDetails = () => {
   return (
     <div>
-      <div className="flex flex-row   gap-10" style={{ marginTop: "5rem" }}>
+      <div className="flex flex-row gap-10 mt-20 md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center">
         <div
-          className="bg-secondary-background rounded-3xl px-11 py-5 flex flex-col items-satrt justify-start h-80 "
+          className="bg-secondary-background rounded-3xl px-11 py-5 flex flex-col items-satrt justify-start h-80 md:w-[600px] sm:w-[500px] "
           // style={{ paddingBottom: 20 }}
         >
           <div className="flex text-xl text-red-400">
@@ -47,11 +47,11 @@ const TemperatureDetails = () => {
           </div>
         </div>
         <div
-          className="bg-secondary-background rounded-3xl px-6 flex flex-col flex-start py-5 "
+          className="bg-secondary-background rounded-3xl px-6 flex flex-col flex-start py-5 md:flex md:flex-col md:items-center md:w-[600px] sm:flex sm:flex-col sm:items-center sm:w-[500px] "
           // style={{ width: "80%" }}
         >
           <p className="text-xl text-red-400">Todays Highlight</p>
-          <div className="flex flex-row gap-5 mt-4 justify-between">
+          <div className="flex flex-row gap-5 mt-4 justify-between md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center">
             <div className="bg-sub-background rounded-3xl px-6 py-5 ">
               <div className="flex items-center justify-between">
                 <p>Air Quality</p>
@@ -95,32 +95,32 @@ const TemperatureDetails = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between mt-10 gap-4">
-            <div className="bg-sub-background rounded-3xl px-6 py-5">
+          <div className="flex justify-between mt-10 gap-4 md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center">
+            <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Humadity</p>
-              <div className="flex flex-row items-center justify-center gap-16 mt-5">
+              <div className="flex flex-row items-center justify-c gap-16 mt-5 md:justify-between sm:justify-between">
                 <UilRaindropsAlt size={55} />
                 <p className="text-4xl">65%</p>
               </div>
             </div>
-            <div className="bg-sub-background rounded-3xl px-6 py-5">
+            <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Pressure</p>
-              <div className="flex flex-row items-center justify-center  mt-5">
+              <div className="flex flex-row items-center justify-center  mt-5 md:justify-between sm:justify-between">
                 <UilTornado size={55} />
                 <p className="text-4xl ml-16">1013</p>
                 <p className="text-2xl">hPa</p>
               </div>
             </div>
-            <div className="bg-sub-background rounded-3xl px-6 py-5">
+            <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Visibility</p>
-              <div className="flex flex-row items-center justify-center gap-16 mt-5">
+              <div className="flex flex-row items-center justify-center gap-16 mt-5 md:justify-between sm:justify-between">
                 <UilEye size={55} />
                 <p className="text-4xl">65%</p>
               </div>
             </div>
-            <div className="bg-sub-background rounded-3xl px-6 py-5">
+            <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Feels Like</p>
-              <div className="flex flex-row items-center justify-center gap-16 mt-5">
+              <div className="flex flex-row items-center justify-center gap-16 mt-5 md:justify-between sm:justify-between">
                 <UilTemperature size={55} />
                 <p className="text-4xl">65%</p>
               </div>
