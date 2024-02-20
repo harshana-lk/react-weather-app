@@ -1,6 +1,5 @@
 import React from "react";
 import WeatherIcon from "../assets/weather-icons/09n.png";
-import Header from "./Header";
 
 const Forcast = () => {
   return (

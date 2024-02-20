@@ -13,8 +13,10 @@ import {
   UilTornado,
   UilEye,
   UilAngleDown,
+  UilCalender,
+  UilMapMarker,
 } from "@iconscout/react-unicons";
-import TimeAndLocation from "./TimeAndLocation";
+import { formatToLocalTime } from "../services/weatherService";
 
 const TemperatureDetails = () => {
   return (
@@ -43,7 +45,18 @@ const TemperatureDetails = () => {
 
           <hr className="mt-5" />
           <div>
-            <TimeAndLocation />
+            <div className="flex flex-col items-start justify-center mt-5">
+              <div className="flex items-center justify-center ">
+                <UilCalender size={25} className="mr-2" />
+                <p className="text-slate-400 font-medium ">20 May 2024</p>
+              </div>
+              <div className="flex items-center justify-center my-3">
+                <UilMapMarker size={25} className="mr-2" />
+                <p className="text-slate-400 font-medium">
+                  Colombo , Sri-Lanka
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div
