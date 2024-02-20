@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherIcon from "../assets/weather-icons/09n.png";
+import UiImage from "../assets/weather-icons/01d.png";
 
 import {
   UilArrowUp,
@@ -18,7 +18,7 @@ import {
 } from "@iconscout/react-unicons";
 import { formatToLocalTime } from "../services/weatherService";
 
-const TemperatureDetails = () => {
+const TemperatureDetails = ({ data }) => {
   return (
     <div>
       <div className="flex flex-row gap-10 mt-20 md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center">
@@ -31,16 +31,16 @@ const TemperatureDetails = () => {
           </div>
           <div className="flex flex-col items-start justify-start gap-5 text-white py-3 px-5">
             <div className="flex items-center justify-center flex-row gap-5">
-              <p className="text-7xl">
-                34°
-                <sup className="text-5xl">C</sup>
-              </p>
+              <span className="text-7xl flex">
+                {data === null ? <p>10</p> : Math.round(data.main.temp)}
+                <sub className=" text-[6rem]">&deg;</sub>
+              </span>
 
-              <img src={WeatherIcon} alt="weather icon" className="w-20" />
+              <img src={UiImage} alt="weather icon" className="w-20" />
             </div>
           </div>
           <div>
-            <p>Broken Clouds</p>
+            <p>{}</p>
           </div>
 
           <hr className="mt-5" />
@@ -113,29 +113,43 @@ const TemperatureDetails = () => {
               <p>Humadity</p>
               <div className="flex flex-row items-center justify-c gap-16 mt-5 md:justify-between sm:justify-between">
                 <UilRaindropsAlt size={55} />
-                <p className="text-4xl">65%</p>
+                <span className="text-4xl">
+                  {data === null ? <p>10</p> : Math.round(data.main.humidity)}%
+                </span>
               </div>
             </div>
             <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Pressure</p>
               <div className="flex flex-row items-center justify-center  mt-5 md:justify-between sm:justify-between">
                 <UilTornado size={55} />
-                <p className="text-4xl ml-16">1013</p>
-                <p className="text-2xl">hPa</p>
+                <span className="text-4xl">
+                  {data === null ? <p>10</p> : Math.round(data.main.pressure)}{" "}
+                  hpa
+                </span>
               </div>
             </div>
             <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Visibility</p>
               <div className="flex flex-row items-center justify-center gap-16 mt-5 md:justify-between sm:justify-between">
                 <UilEye size={55} />
-                <p className="text-4xl">65%</p>
+                <span className="text-4xl">
+                  {data === null ? (
+                    <p>10</p>
+                  ) : (
+                    Math.round(data.visibility / 1000)
+                  )}{" "}
+                  km
+                </span>
               </div>
             </div>
             <div className="bg-sub-background rounded-3xl px-6 py-5 md:w-[475px] sm:w-[450px]">
               <p>Feels Like</p>
               <div className="flex flex-row items-center justify-center gap-16 mt-5 md:justify-between sm:justify-between">
                 <UilTemperature size={55} />
-                <p className="text-4xl">65%</p>
+                <p className="text-4xl">
+                  {data === null ? <p>10</p> : Math.round(data.main.temp)}
+                  <sup>&deg;</sup>
+                </p>
               </div>
             </div>
           </div>
