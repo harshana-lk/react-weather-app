@@ -31,11 +31,12 @@ export default function Search({ onSearchChange }) {
       border: "none",
       boxShadow: state.isFocused ? "none" : null,
       backgroundColor: "#1d1c1f",
+      color: "white",
     }),
     option: (provided, state) => ({
       ...provided,
       backgroundColor: state.isFocused ? "#1d1c1f" : null,
-      //   color: state.isFocused ? "white" : null,
+      color: state.isFocused ? "white" : null,
       backgroundColor: "#1d1c1f",
       bordeColor: "#1d1c1f",
       border: "none",

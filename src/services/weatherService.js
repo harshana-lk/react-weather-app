@@ -25,3 +25,8 @@ export async function fetchCities(input) {
     return;
   }
 }
+
+const iconUrlFromCode = (code) =>
+  `http://openweathermap.org/img/wn/${code}@2x.png`;
+
+export default iconUrlFromCode;
