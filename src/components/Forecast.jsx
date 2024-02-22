@@ -1,5 +1,6 @@
 import React from "react";
 import { iconUrlFromCode } from "../services/weatherServices";
+import LineChart from "./LineChart";
 const Forecast = ({ title, items }) => {
   console.log("this is item passed on ", items);
   return (
@@ -21,6 +22,7 @@ const Forecast = ({ title, items }) => {
           </div>
         ))}
       </div>
+      <LineChart />
     </div>
   );
 };

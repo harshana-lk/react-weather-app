@@ -7,9 +7,10 @@ import Forecast from "./components/Forecast";
 // import getWeatherData from './services/weatherServices';
 import getFormattedWeatherData from "./services/weatherServices";
 import { useEffect, useState } from "react";
+import BarChart from "./components/LineChart";
 
 function App() {
-  const [query, setQuery] = useState({ q: "tokyo" });
+  const [query, setQuery] = useState({ q: "Colombo" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
