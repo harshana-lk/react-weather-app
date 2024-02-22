@@ -51,8 +51,8 @@ const formatForecastWeather = (data) => {
   console.log("Daily is undefined", data);
   let { timezone, daily, hourly } = data;
   // we dont need to day so skip o-6 : slice method returns new array without disturbing old: and the
-  // slice mapps first array and ignores last one.
-  daily = daily.slice(1, 6).map((d) => {
+  // slice mapps ignores first array and  last one.
+  daily = daily.slice(1, 8).map((d) => {
     return {
       // ccc implies the day sun mon tue
       title: formatToLocalTime(d.dt, timezone, "ccc"),
@@ -60,7 +60,7 @@ const formatForecastWeather = (data) => {
       icon: d.weather[0].icon,
     };
   });
-  hourly = hourly.slice(1, 6).map((d) => {
+  hourly = hourly.slice(1, 9).map((d) => {
     return {
       // ccc implies the day sun mon tue
       title: formatToLocalTime(d.dt, timezone, "hh:mm a"),
@@ -72,6 +72,7 @@ const formatForecastWeather = (data) => {
   return { timezone, daily, hourly };
 };
 
+// Construct all weather data
 const getFormattedWeatherData = async (searchParams) => {
   const formattedCurrentWeather = await getWeatherData(
     "weather",

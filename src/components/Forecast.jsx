@@ -48,7 +48,7 @@ const Forecast = ({ title, items }) => {
         <p className="text-red-400 font-medium uppercase text-xl">{title}</p>
       </div>
       <hr className="m-5" />
-      <div className="flex items-center justify-between text-white">
+      <div className="flex items-center justify-between text-white overflow-x-auto">
         {items.map((item) => (
           <div className="flex flex-col items-center justify-center">
             <p className="font-light text-md">{item.title}</p>
