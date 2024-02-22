@@ -1,7 +1,46 @@
-import React from "react";
 import { iconUrlFromCode } from "../services/weatherServices";
-import LineChart from "./LineChart";
+import React, { useEffect, useRef } from "react";
+import Chart from "chart.js/auto";
+
 const Forecast = ({ title, items }) => {
+  const chartRef = useRef(null);
+  const chartInstarnce = useRef(null);
+  useEffect(() => {
+    if (chartInstarnce.current) {
+      chartInstarnce.current.destroy();
+    }
+    const mychartRef = chartRef.current.getContext("2d");
+
+    chartInstarnce.current = new Chart(mychartRef, {
+      type: "line",
+      data: {
+        labels: items.map((item) => item?.title),
+        datasets: [
+          {
+            label: title,
+            data: items.map((item) => item?.temp),
+            fill: false,
+            borderColor: "rgb(248, 113, 113)",
+            borderWidth: 2,
+          },
+        ],
+      },
+      width: "100%",
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    });
+    return () => {
+      if (chartInstarnce.current) {
+        chartInstarnce.current.destroy();
+      }
+    };
+  }, []);
   console.log("this is item passed on ", items);
   return (
     <div className="w-3/4 mx-auto bg-[#1d1c1f] p-10 m-10 rounded-3xl">
@@ -22,7 +61,9 @@ const Forecast = ({ title, items }) => {
           </div>
         ))}
       </div>
-      <LineChart />
+      <div className="h-80 w-auto mt-6">
+        <canvas ref={chartRef} />
+      </div>
     </div>
   );
 };

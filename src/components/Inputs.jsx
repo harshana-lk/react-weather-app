@@ -34,10 +34,12 @@ const Inputs = ({ setQuery, units, setUnits }) => {
     <div>
       <hr className="my-10" />
       <div className=" flex flex-row justify-center items-center my-6">
-        <div className=" flex flex-row items-center justify-evenly space-x-4">
-          <a href="#" className="mr-10">
-            <img src={Logo} alt="logo" width={560} height={58} />
-          </a>
+        <div className=" flex flex-row items-center justify-evenly space-x-4 md:flex md:flex-col sm:flex sm:flex-col">
+          <div className="flex flex-row justify-center items-center">
+            <a href="#" className="mr-10 sm:w-80">
+              <img src={Logo} alt="logo" width={560} height={58} />
+            </a>
+          </div>
           <input
             type="text"
             className=" font-medium p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase rounded-full bg-[#1d1c1f] text-white px-5"
@@ -45,6 +47,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
+
           <BiSearchAlt2
             size={55}
             className="text-white cursor-pointer transition ease-out hover:scale-125"
@@ -55,7 +58,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
             className="text-white cursor-pointer transition ease-out hover:scale-125"
             onClick={handleLocationClick}
           />
-          <div className=" flex flex-row w-1/4 items-center justify-center">
+          <div className=" flex flex-row w-1/4 items-center justify-center ml-5">
             <button
               name="metric"
               className="text-xl text-white font-light hover:scale-125 transition ease-out"
